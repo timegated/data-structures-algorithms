@@ -1,0 +1,28 @@
+* {
+ box-sizing: border-box;   
+}
+body {
+    background: chocolate;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+    max-width: 1200px;
+    margin: auto;
+    border: 1px solid rgb(103, 219, 248);
+    font-size: 36px;
+}
+
+.title {
+    text-align: center;
+}
+
+.numbers {
+    border: 1px solid lightblue;
+    display: block;
+    width: 25%;
+    margin: auto;
+    text-align: center;
+}
