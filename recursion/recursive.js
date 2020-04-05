@@ -36,3 +36,16 @@ for (let i = 0; i <= 20; i++) {
     wrFib(`${i}. ${fibonacci(i)}`)
 
 };
+
+// Write a function that computes a factorial recursively n!
+
+function factorial(n) {
+    if (n < 2) {
+        return 1
+    }
+    else {
+        return  n * factorial(n-1)
+    }
+}
+
+console.log(factorial(3))

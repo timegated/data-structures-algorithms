@@ -3,7 +3,7 @@
 }
 
 body {
-    background: chocolate;
+    background: #c7c7c7;
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -13,22 +13,23 @@ body {
     /* justify-content: center; */
     max-width: 1200px;
     margin: auto;
-    border: 1px solid rgb(103, 219, 248);
-    font-size: 36px;
+    border: 1px solid #030203;
+    font-size: 24px;
     font-weight: bold;
-    overflow: scroll;
+    /* overflow: scroll; */
 }
 
 .container-two {
+     margin-top: .5rem;
      display: flex;
      flex-direction: column;
      /* justify-content: center; */
      max-width: 1200px;
      margin: auto;
-     border: 1px solid rgb(103, 219, 248);
-     font-size: 36px;
+     border: 1px solid #030203;
+     font-size: 24px;
      font-weight: bold;
-     overflow: scroll;
+     /* overflow: scroll; */
 }
 
 .title {
@@ -36,7 +37,7 @@ body {
 }
 
 .numbers {
-    border: 1px solid lightblue;
+    border: 1px solid #030203;
     display: block;
     width: 25%;
     margin: auto;
