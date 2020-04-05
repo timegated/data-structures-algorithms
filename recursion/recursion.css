@@ -1,9 +1,12 @@
 * {
  box-sizing: border-box;   
 }
+
 body {
     background: chocolate;
+    font-family: 'Courier New', Courier, monospace;
 }
+
 .container {
     display: flex;
     flex-direction: column;
@@ -13,6 +16,7 @@ body {
     margin: auto;
     border: 1px solid rgb(103, 219, 248);
     font-size: 36px;
+    font-weight: bold;
 }
 
 .title {
