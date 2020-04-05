@@ -7,16 +7,28 @@ body {
     font-family: 'Courier New', Courier, monospace;
 }
 
-.container {
+.container-one {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: 500px;
+    /* justify-content: center; */
     max-width: 1200px;
     margin: auto;
     border: 1px solid rgb(103, 219, 248);
     font-size: 36px;
     font-weight: bold;
+    overflow: scroll;
+}
+
+.container-two {
+     display: flex;
+     flex-direction: column;
+     /* justify-content: center; */
+     max-width: 1200px;
+     margin: auto;
+     border: 1px solid rgb(103, 219, 248);
+     font-size: 36px;
+     font-weight: bold;
+     overflow: scroll;
 }
 
 .title {
