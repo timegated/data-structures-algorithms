@@ -16,12 +16,31 @@
             <h5>Basic Recursion</h5>
             <p>Not really applicable, a for-loop would work better here</p>
         </div>
+        <pre>
+            function basicRecursion(max, current) {
+            if (current > max) return;
+            
+            basicRecursion(max, current + 1)
+            };
+
+        </pre>
     </div>
     <div class="container-two">
         <div class="title">
             <h5>Fibonacci Sequence</h5>
             <p>A better use for recursion</p>
         </div>
+        <pre>
+            function fibonacci(n) {
+
+            if (n <= 2) { 
+                return 1 
+            } 
+            else { 
+                return fibonacci(n - 1) + fibonacci(n - 2) 
+            } 
+        };
+        </pre>
     </div>
 </body>
 

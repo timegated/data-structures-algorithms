@@ -19,6 +19,9 @@ wr();
 
 // Fibonacci
 
+// This gets called 6765 times when called with 20 as an argument
+// Adding 1 itself until it equals this number
+
 function fibonacci(n) {
     if (n <= 2) {
         return 1
