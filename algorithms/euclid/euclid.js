@@ -20,7 +20,7 @@ function euclidNumber(num1, num2) {
 // console.log(euclidNumber(8, 12))
 // console.log(0 <= 0 < 3)
 
-function gcd(m, n, r) {
+function gcd(m, n) {
     if (m === 0) {
         return n
     }
@@ -76,4 +76,5 @@ function xgcd(a, b) {
     return [b, signX * x, signY * y];
 }
 
-console.log(xgcd(8, 12))
+// console.log(xgcd(8, 12))
+// console.log(1/1)
