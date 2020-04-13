@@ -6,13 +6,13 @@ const simpleObj = {
     name: 'Person',
     age: 35,
     friends: [{
-            name: 'Peter',
-            age: 30
-        },
-        {
-            name: 'Jess',
-            age: 40
-        }
+        name: 'Peter',
+        age: 30
+    },
+    {
+        name: 'Jess',
+        age: 40
+    }
     ],
     car: {
         name: 'Honda',
@@ -20,8 +20,9 @@ const simpleObj = {
         year: 1999
     }
 
-}
-console.dir(Array.prototype)
-console.dir(Object)
-console.log('Simple Array:', simpleArray)
-console.log('Simple Object', simpleObj)
+};
+
+console.dir(Array.prototype);
+console.dir(Object);
+console.log('Simple Array:', simpleArray);
+console.log('Simple Object', simpleObj);
