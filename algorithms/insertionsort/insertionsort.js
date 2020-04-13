@@ -11,5 +11,4 @@ const insertionSort = (nums) => {
         }
     }
 }
-
 console.log(insertionSort(nums))
