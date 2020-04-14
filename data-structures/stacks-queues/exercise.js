@@ -38,6 +38,8 @@ Stack.prototype.peek = function () {
 Stack.prototype.count = function () {
     return this._count;
 };
+var newStack = new Stack(5);
+console.log(newStack.push(5))
 
 function MinStack() {
     this._storage = {};
@@ -59,8 +61,37 @@ MinStack.prototype.push = function (value) {
     return 'Max capacity already reached. Remove element before adding a new one.';
 }
 
-var stack = new MinStack()
+var myStack = new MinStack()
+myStack.push(5)
+console.log(myStack._storage)
+console.log('Count', myStack._count)
+console.log(myStack._min)
 
-console.log(stack._storage)
-console.log(stack._count)
-console.log(stack._min)
+function Queue_TwoStacks() {
+    this._stackIn = new Stack();
+    this._stackOut = new Stack();
+}
+
+Queue_TwoStacks.prototype.enqueue = function (val) {
+    this._stackIn.push(val);
+};
+
+Queue_TwoStacks.prototype._transferStacks = function () {
+    while (this._stackIn.count() > 0) {
+        this._stackOut.push(this._stackIn.pop());
+    }
+};
+
+Queue_TwoStacks.prototype.dequeue = function () {
+    if (this._stackOut.count() === 0) this._transferStacks();
+    return this._stackOut.pop();
+};
+
+Queue_TwoStacks.prototype.count = function () {
+    return this._stackIn.count() + this._stackOut.count();
+};
+
+Queue_TwoStacks.prototype.peek = function () {
+    if (this._stackOut.count() === 0) this._transferStacks();
+    return this._stackOut.peek();
+};
