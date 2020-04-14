@@ -21,5 +21,31 @@ var populate = function (n, entry) {
     return populate(n - 1, entry + 1)
 };
 
-populate(100, 1)
-console.log(arr)
+// populate(100, 1)
+// console.log(arr)
+
+// Finding factorials recursively
+
+var factorialize = function (n) {
+    if (n <= 1) {
+        return n
+    }
+    return n * factorialize(n - 1)
+}
+
+// console.log(factorialize(4))
+// console.log(factorialize(1))
+// 4 * 4-1 * 3-1 * 2 - 1 -- stop = 24
+
+// greatest common denominator attempt
+
+var gcd = function (m, n) {
+    if (m % n === 0) {
+        return m
+    }
+    return gcd(m, m % n)
+}
+
+console.log(gcd(5, 2))
+
+
