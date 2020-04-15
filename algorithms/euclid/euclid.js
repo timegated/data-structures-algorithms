@@ -77,4 +77,3 @@ function xgcd(a, b) {
 }
 
 // console.log(xgcd(8, 12))
-// console.log(1/1)
