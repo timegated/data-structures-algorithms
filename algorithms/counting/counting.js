@@ -1,6 +1,6 @@
 // Counting numbers x + 1 based on their occurence in an array
 
-const nums = [17, 24, 9, 20, 9, 17, 9, 8, 11, 10, 20, 1, 14, 13, 9, 26, 15, 25, 8, 26, 8, 4, 5, 8, 4, 11, 7, ]
+const nums = [17, 24, 9, 20, 9, 17, 9, 8, 11, 10, 20, 1, 14, 13, 9, 26, 15, 25, 8, 26, 8, 4, 5, 8, 4, 11, 7]
 
 
 const countElements = (arr) => {
@@ -21,7 +21,7 @@ const countElements = (arr) => {
         if (tempObj[Number(key) + 1]) {
             count++
             if (tempObj[Number(key)].occurs >= 2) {
-                count = count + (tempObj[Number(key)].occurs / 2)
+                count = count + (tempObj[Number(key)].occurs - 1)
             }
         }
     }
