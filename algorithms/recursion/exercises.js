@@ -30,10 +30,13 @@ function recursiveMultiply(arr, num) {
         return arr;
     }
     var last = arr.pop();
-    console.log(last)
+
+    console.log(last);
+
     recursiveMultiply(arr, num);
-    console.log(arr)
-    arr.push(last * num)
+    console.log(arr);
+
+    arr.push(last * num);
     return arr;
 }
 
