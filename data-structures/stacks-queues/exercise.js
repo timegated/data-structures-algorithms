@@ -1,5 +1,6 @@
 // Min-Stack
 // Implement a stack that keeps track of its minimum value;
+// "Blueprints" for the instantiation of this structure
 function Stack(capacity) {
     this._capacity = capacity || Infinity;
     this._storage = {};
