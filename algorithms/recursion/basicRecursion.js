@@ -33,7 +33,7 @@ var factorialize = function (n) {
     return n * factorialize(n - 1)
 }
 
-// console.log(factorialize(4))
+console.log(factorialize(4))
 // console.log(factorialize(1))
 // 4 * 4-1 * 3-1 * 2 - 1 -- stop = 24
 
@@ -46,6 +46,6 @@ var gcd = function (m, n) {
     return gcd(m, m % n)
 }
 
-console.log(gcd(5, 2))
+// console.log(gcd(5, 2))
 
 

@@ -1,26 +1,47 @@
-// Creating a stack interface
-// Trees/Graphs/Linked Lists don't come out of the box for JS
-var Stack = function () {
-  this.storage = "";
+// 
+
+function Stack(capacity) {
+  this._capacity = capacity || Infinity;
+  this._storage = {};
+  this._count = 0;
 };
 
 Stack.prototype.push = function (val) {
-  this.storage = this.storage.concat(",",val);
+  if (this._count < this._capacity) {
+    this._storage[this._count++] = val;
+    return this._count;
+  }
+  return val;
 };
 
-Stack.prototype.pop = function (val) {
-  var str = this.storage.slice(this.storage.lastIndexOf("," + 3));
-  this.storage = this.storage.substring(0, this.storage.lastIndexOf(","));
-  return str;
+Stack.prototype.pop = function () {
+  var value = this._storage[--this._count];
+  delete this._storage[this._count];
+  if (this._count < 0) {
+    this._count = 0;
+  }
+  return value;
 };
 
+Stack.prototype.peek = function () {
+  return this._storage[this._count - 1];
+};
+
+// indirect recursion
 var newStack = new Stack();
 
-newStack.push("Eggs");
-newStack.push("Onions");
-newStack.push("Potatoes");
-newStack.push("Rosemary");
-newStack.pop();
-newStack.pop();
-newStack.push("Jam");
-console.dir(newStack);
+function populate(val, item) {
+  var nextVal = val - 1;
+  if (nextVal > 0) {
+    populate(nextVal, item);
+    newStack.push(item);
+  }
+}
+
+// newStack.push("CatOne")
+// newStack.push("CatTwo")
+// newStack.push("CatThree")
+// console.log("Peek method on stack:", newStack.peek())
+populate(100, "Cat")
+// newStack.pop()
+console.log(newStack);
